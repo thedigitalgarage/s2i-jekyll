@@ -12,12 +12,12 @@
           "description": "Build and run Jekyll sites",
           "iconClass": "fa fa-flask",
           "tags": "builder,jekyll",
-          "supports": "jekyll:3.2.1,jekyll",
-          "version": "3.2.1"
+          "supports": "jekyll:3.7.3,jekyll",
+          "version": "3.7.3"
         },
         "from": {
           "kind": "DockerImage",
-          "name": "computersciencehouse/jekyll-centos7:latest"
+          "name": "thedigitalgarage/s2i-jekyll-centos7:latest"
         }
       }
     ]
