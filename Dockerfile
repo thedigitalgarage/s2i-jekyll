@@ -3,7 +3,7 @@ FROM openshift/base-centos7
 MAINTAINER John McCawley <john.mccawley@thedigitalgarage.io>
 
 # Inform about software versions being used inside the builder
-ENV JEKYLL_VERSION=3.2.1
+ENV JEKYLL_VERSION=3.7.3
 
 # Labels used in OpenShift to describe the builder image
 LABEL io.k8s.description="Platform for building Jekyll-based static sites" \
