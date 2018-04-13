@@ -1,5 +1,6 @@
 # jekyll-centos7
-FROM openshift/base-centos7
+#FROM openshift/base-centos7
+FROM centos/ruby-23-centos7
 MAINTAINER John McCawley <john.mccawley@thedigitalgarage.io>
 
 # Inform about software versions being used inside the builder
@@ -13,7 +14,7 @@ LABEL io.k8s.description="Platform for building Jekyll-based static sites" \
 
 # Install required packages
 RUN yum install -y epel-release && \
-yum install -y ruby ruby-devel nginx nodejs && \
+yum install -y nginx nodejs && \
 yum clean all -y
 
 # Install Jekyll and Bundler with RubyGems
