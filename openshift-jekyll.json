@@ -13,7 +13,7 @@
           "iconClass": "fa fa-flask",
           "tags": "builder,jekyll",
           "supports": "jekyll:3.7.3,jekyll",
-          "version": "3.7.3"
+          "version": "3.7.0"
         },
         "from": {
           "kind": "DockerImage",
