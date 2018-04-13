@@ -12,7 +12,7 @@ LABEL io.k8s.description="Platform for building Jekyll-based static sites" \
       io.openshift.tags="builder,jekyll,3.7.0,static"
 
 # Install required packages
-RUN yum install -y epel-release && \
+RUN yum install -y centos-release-scl && \
 yum install -y rh-ruby24 rh-ruby24-ruby-devel rh-ruby24-rubygem-rake rh-ruby24-rubygem-bundler nginx nodejs && \
 yum clean all -y
 
