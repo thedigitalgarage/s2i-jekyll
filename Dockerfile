@@ -3,6 +3,8 @@
 FROM centos/ruby-23-centos7
 MAINTAINER John McCawley <john.mccawley@thedigitalgarage.io>
 
+USER 0
+
 # Inform about software versions being used inside the builder
 ENV JEKYLL_VERSION=3.2.1
 
