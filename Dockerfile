@@ -21,8 +21,8 @@ LABEL io.k8s.description="Platform for building Jekyll-based static sites" \
 USER root
 
 # Install Jekyll and Bundler with RubyGems
- RUN gem install jekyll
- RUN gem install bundler
+ RUN /bin/bash -l -c "gem install jekyll"
+ RUN /bin/bash -l -c "gem install bundler"
 
 # Copy the S2I scripts to /usr/libexec/s2i, since openshift/base-centos7
 # image sets io.openshift.s2i.scripts-url label that way
