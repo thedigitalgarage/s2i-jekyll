@@ -20,8 +20,8 @@ RUN yum install -y centos-release-scl && \
 
 
 # Install Jekyll and Bundler with RubyGems
-RUN gem install jekyll
-RUN gem install bundler
+# RUN gem install jekyll
+# RUN gem install bundler
 
 # Copy the S2I scripts to /usr/libexec/s2i, since openshift/base-centos7
 # image sets io.openshift.s2i.scripts-url label that way
