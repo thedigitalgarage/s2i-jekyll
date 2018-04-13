@@ -1,6 +1,6 @@
 # jekyll-centos7
 FROM openshift/base-centos7
-MAINTAINER Steven Mirabito <smirabito@csh.rit.edu>
+MAINTAINER John McCawley <john.mccawley@thedigitalgarage.io>
 
 # Inform about software versions being used inside the builder
 ENV JEKYLL_VERSION=3.2.1
@@ -9,7 +9,7 @@ ENV JEKYLL_VERSION=3.2.1
 LABEL io.k8s.description="Platform for building Jekyll-based static sites" \
       io.k8s.display-name="Jekyll 3.2.1" \
       io.openshift.expose-services="8080:http" \
-      io.openshift.tags="jekyll,3.2.1,static"
+      io.openshift.tags="builder,jekyll,3.2.1,static"
 
 # Install required packages
 RUN yum install -y epel-release && \
