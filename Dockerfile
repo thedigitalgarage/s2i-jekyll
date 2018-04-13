@@ -1,15 +1,15 @@
 # jekyll-centos7
 FROM openshift/base-centos7
-MAINTAINER Steven Mirabito <smirabito@csh.rit.edu>
+MAINTAINER John McCawley <john.mccawley@thedigitalgarage.io>
 
 # Inform about software versions being used inside the builder
 ENV JEKYLL_VERSION=3.2.1
 
 # Labels used in OpenShift to describe the builder image
 LABEL io.k8s.description="Platform for building Jekyll-based static sites" \
-      io.k8s.display-name="Jekyll 3.2.1" \
+      io.k8s.display-name="Jekyll 3.7.3" \
       io.openshift.expose-services="8080:http" \
-      io.openshift.tags="jekyll,3.2.1,static"
+      io.openshift.tags="builder,jekyll,3.7.3,static"
 
 # Install required packages
 RUN yum install -y epel-release && \
@@ -17,7 +17,7 @@ yum install -y ruby ruby-devel nginx nodejs && \
 yum clean all -y
 
 # Install Jekyll and Bundler with RubyGems
-RUN gem install jekyll -v 3.2.1
+RUN gem install jekyll -v 3.7.3
 RUN gem install bundler
 
 # Copy the S2I scripts to /usr/libexec/s2i, since openshift/base-centos7
